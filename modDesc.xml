@@ -21,8 +21,10 @@ Requires AutoDrive and the savegame's configured "Winterdienst Start/End" route.
     <multiplayer supported="true"/>
 
     <actions>
-        <action name="WINTERDIENST_ACCEPT_DIALOG" category="GLOBAL" axisType="HALF" />
+        <!-- REPARATUR: category auf SYSTEM gesetzt und axisType entfernt -->
+        <action name="WINTERDIENST_ACCEPT_DIALOG" category="SYSTEM" />
     </actions>
+    
     <inputBinding>
         <actionBinding action="WINTERDIENST_ACCEPT_DIALOG">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_lalt KEY_z" />
@@ -30,6 +32,7 @@ Requires AutoDrive and the savegame's configured "Winterdienst Start/End" route.
     </inputBinding>
 
     <extraSourceFiles>
+        <!-- REPARATUR: Ordnerpfad "scripts/" davor gesetzt, damit das Spiel sie findet! -->
         <sourceFile filename="scripts/WinterdienstMission.lua"/>
     </extraSourceFiles>
 
@@ -39,5 +42,4 @@ Requires AutoDrive and the savegame's configured "Winterdienst Start/End" route.
             <en>Winter service contract</en>
         </text>
     </l10n>
-
 </modDesc>
