@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="105" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../shared/xml/schema/modDesc.xsd">
+    <author>FedAction</author>
+    <version>3.18.0.0</version>
+
+    <title>
+        <de>Winterdienst-Auftrag</de>
+        <en>Winterdienst Contract</en>
+    </title>
+
+    <description>
+        <de><![CDATA[Eigenständiger Winterdienst-Auftrag für die Karte NF Marsch 4fach oG.
+Per Tastendruck (Umschalt links + Alt links + Z) im Fahrzeug annehmbar, sofern Schnee liegt.
+Benötigt AutoDrive und die zugehörige, im Savegame konfigurierte Route "Winterdienst Start/Ende".]]></de>
+        <en><![CDATA[Standalone winter service contract for the NF Marsch 4fach oG map.
+Accept via keypress (Left Shift + Left Alt + Z) while seated in the vehicle, if snow is lying.
+Requires AutoDrive and the savegame's configured "Winterdienst Start/End" route.]]></en>
+    </description>
+
+    <iconFilename>icon_Winterdienst.png</iconFilename>
+    <multiplayer supported="true"/>
+
+    <actions>
+        <action name="WINTERDIENST_ACCEPT_DIALOG" category="GLOBAL" axisType="HALF" />
+    </actions>
+    <inputBinding>
+        <actionBinding action="WINTERDIENST_ACCEPT_DIALOG">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_lalt KEY_z" />
+        </actionBinding>
+    </inputBinding>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/WinterdienstMission.lua"/>
+    </extraSourceFiles>
+
+    <l10n>
+        <text name="input_WINTERDIENST_ACCEPT_DIALOG">
+            <de>Winterdienst-Auftrag</de>
+            <en>Winter service contract</en>
+        </text>
+    </l10n>
+
+</modDesc>
